@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Quiz & Live Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">TechExplorer</h2>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#api">Live Data</a></li>
+            </ul>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Explore. Learn. Challenge Yourself.</h1>
+            <p>
+                Test your knowledge with an interactive quiz
+                and discover interesting information using live APIs.
+            </p>
+            <a href="#quiz" class="main-btn">Start Quiz</a>
+        </div>
+    </section>
+
+    <section class="quiz-section" id="quiz">
+        <h2>Interactive Tech Quiz</h2>
+        <p>Answer the questions and test your knowledge!</p>
+
+        <div class="quiz-box">
+            <h3 id="question">Question will appear here</h3>
+
+            <div id="answers" class="answers"></div>
+
+            <p id="feedback"></p>
+
+            <button id="nextBtn" class="main-btn">
+                Next Question
+            </button>
+
+            <h3 id="score"></h3>
+        </div>
+    </section>
+
+    <section class="api-section" id="api">
+        <h2>Interesting Facts & Jokes</h2>
+        <p>Fetch a random joke from a public API.</p>
+
+        <div class="api-box">
+            <p id="joke">Click the button to load a joke!</p>
+
+            <button id="jokeBtn" class="main-btn">
+                Get New Joke
+            </button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 TechExplorer | ApexPlanet Task 3</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

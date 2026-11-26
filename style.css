@@ -1,0 +1,273 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f6fb;
+    color: #222;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #171b3b;
+    color: white;
+}
+
+.logo {
+    color: #65d6c4;
+    font-size: 26px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #65d6c4;
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #171b3b, #354c91);
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    display: inline-block;
+    background: #65d6c4;
+    color: #171b3b;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background: #45b9a7;
+    transform: translateY(-3px);
+}
+
+/* Quiz Section */
+.quiz-section,
+.api-section {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.quiz-section h2,
+.api-section h2 {
+    font-size: 30px;
+    color: #171b3b;
+    margin-bottom: 12px;
+}
+
+.quiz-section > p,
+.api-section > p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.quiz-box {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.quiz-box h3 {
+    margin-bottom: 22px;
+}
+
+.answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.answer-btn {
+    padding: 15px;
+    border: 2px solid #dce2ee;
+    background: #f8f9fd;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.answer-btn:hover {
+    background: #e1f8f3;
+    border-color: #65d6c4;
+}
+
+.answer-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+#feedback {
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+#score {
+    margin-top: 20px;
+    color: #354c91;
+}
+
+/* API Section */
+.api-section {
+    background: #e9edf8;
+}
+
+.api-box {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+#joke {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #171b3b;
+    color: white;
+    padding: 22px;
+}
+
+/* Responsive Design - Tablets */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .answers {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 600px) {
+    .navbar {
+        position: relative;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background: #171b3b;
+        padding: 20px;
+        z-index: 10;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 350px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .quiz-section,
+    .api-section {
+        padding: 45px 5%;
+    }
+
+    .quiz-box,
+    .api-box {
+        padding: 22px;
+    }
+
+    .quiz-section h2,
+    .api-section h2 {
+        font-size: 25px;
+    }
+}
